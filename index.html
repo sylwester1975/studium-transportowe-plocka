@@ -63,142 +63,122 @@
             margin: 30px 0;
             border-radius: 0 4px 4px 0;
         }
+        .map-section {
+            margin: 35px 0;
+            text-align: center;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .map-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            cursor: zoom-in;
+            transition: transform 0.2s ease;
+        }
+        .map-section img:hover {
+            transform: scale(1.01);
+        }
+        .map-caption {
+            font-size: 0.9rem;
+            color: #718096;
+            margin: 12px 0;
+            font-style: italic;
+        }
+        .btn-original {
+            display: inline-block;
+            background-color: #2b6cb0;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+            margin-top: 5px;
+        }
+        .btn-original:hover {
+            background-color: #2c5282;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+        .lightbox img {
+            max-width: 95%;
+            max-height: 95%;
+            border-radius: 4px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-
-    <h1>STUDIUM STRATEGICZNE: KONIECZNOŚĆ GRUNTOWNEJ MODERNIZACJI I ROZBUDOWY UKŁADU TRANSPORTOWEGO PŁOCKA JAKO KLUCZOWEGO OŚRODKA BEZPIECZEŃSTWA PALIWOWO-ENERGETYCZNEGO POLSKI</h1>
-
+    <h1>STUDIUM STRATEGICZNE: UKŁAD TRANSPORTOWY PŁOCKA</h1>
     <hr>
+    <h2>STRESZCZENIE MENEDŻERSKIE</h2>
+    <p>Opracowanie dotyczy modernizacji infrastruktury transportowej Płocka w kontekście bezpieczeństwa energetycznego i obronnego kraju.</p>
+    
+    <h2>1. WSTĘP</h2>
+    <p>Wyzwania geopolityczne i wymogi mobilności wojskowej wymagają weryfikacji mapy transportowej w rejonie Płocka.</p>
 
-    <h2>STRESZCZENIE MENEDŻERSKIE (ABSTRAKT KONCEPCJI ROZBUDOWY INFRASTRUKTURY PŁOCKA)</h2>
+    <h2>2. KRAJOBRAZ BEZPIECZEŃSTWA</h2>
+    <p>Aglomeracja skupia zakłady infrastruktury krytycznej (ORLEN, PERN) wymagające bezpiecznego, bezkolizyjnego otoczenia transportowego.</p>
 
-    <p>Przedmiotem niniejszego opracowania jest wykazanie konieczności pilnego i kompleksowego przemodelowania infrastruktury transportowej Płocka, będącego kluczowym, strategicznym ogniwem w systemie bezpieczeństwa energetycznego, paliwowego oraz obronnego Rzeczypospolitej Polskiej. Obecny układ komunikacyjny generuje krytyczne ryzyka operacyjne ze względu na brak bezkolizyjnych powiązań z siecią dróg szybkiego ruchu oraz niedostosowanie sieci kolejowej do wymogów masowego transportu cargo i przewozów pasażerskich.</p>
-
-    <p>Osiągnięcie pełnej odporności logistycznej i gospodarczej tego kluczowego hubu przemysłowego wymaga równoległego wdrożenia zintegrowanego pakietu rozwiązań infrastrukturalnych, opierającego się na czterech głównych filarach:</p>
-
-    <div class="highlight-box">
-        <ul>
-            <li><strong>FILAR KOLEJOWY TOWAROWY:</strong> Wyprowadzenie ciężkich transportów towarów niebezpiecznych (RID) z gęsto zaludnionych stref miejskich poprzez budowę nowej Towarowej Obwodnicy Płocka (wariant zachodni) oraz integrację węzła z magistralą CMK-Północ.</li>
-            <li><strong>FILAR KOLEJOWY PASAŻERSKO-AWARYJNY:</strong> Budowa nowoczesnej, dwutorowej przeprawy kolejowej przez Wisłę na wysokości Mostu Solidarności dla obsługi nowych potoków pasażerskich (linia Płock – Ciechanów – Przasnysz oraz zjazdy z CMK-Północ) wraz z zapewnieniem funkcji strategicznego bypassu towarowego i wojskowego.</li>
-            <li><strong>FILAR DROGOWY LOKALNY:</strong> Domknięcie dwujezdniowego ringu miejskiego (klasa GP) wraz z budową nowego mostu drogowego na wysokości Maszewa, dedykowanego dla separacji transportu chemicznego (ADR) od potoków miejskich i ewakuacyjnych.</li>
-            <li><strong>FILAR DROGOWY KRAJOWY:</strong> Wdrożenie do krajowych planów strukturalnych projektu Drogi Ekspresowej S60 na trasie Kalisz – Płock – Zambrów, pełniącej rolę strategicznego obejścia przeciążonego węzła Stryków oraz stanowiącej element transwersalnego korytarza obronnego NATO we współpracy z drogą S12.</li>
-        </ul>
+    <div class="map-section">
+        <img src="uklad-transportowy-plocka.png" alt="Koncepcja ukształtowania układu transportowego Płocka" onclick="openLightbox(this)">
+        <div class="map-caption">Rysunek 1. Ogólna koncepcja ukształtowania zintegrowanego układu transportowego Płocka</div>
+        <a href="https://github.io" class="btn-original" target="_blank">📥 Otwórz mapę w oryginalnym rozmiarze</a>
     </div>
 
-    <p>Zintegrowane inwestycje w rejonie Płocka spełniają w 100% kryteria infrastruktury podwójnego zastosowania (Dual-Use) i kwalifikuje się do natychmiastowego dofinansowania z budżetu unijnego Military Mobility oraz krajowych środków obronnych.</p>
+    <h2>3. INFRASTRUKTURA DROGOWA I KOLEJOWA</h2>
+    <p>Kluczowe znaczenie ma budowa drogi S60 oraz obwodnic i nowych przepraw przez Wisłę.</p>
 
-    <hr>
-
-    <h2>1. WSTĘP I ISTOTA PROBLEMÓW STRATEGICZNYCH</h2>
-
-    <p>Współczesne wyzwania geopolityczne, narastające zagrożenia hybrydowe oraz wymogi mobilności wojskowej (Military Mobility) NATO wymuszają natychmiastową weryfikację mapy transportowej Polski w rejonie jej najważniejszego węzła rafineryjno-petrochemicznego i wodorowego – Płocka. Nadrzędnym celem państwa musi być zapewnienie ciągłości operacyjnej i obronnej płockich zakładów, które stanowią serce zaopatrzenia paliwowego kraju. Pomimo tak fundamentalnej roli, wieloletnie, systemowe zaniedbania doprowadziły do sytuacji, w której miasto pozostaje komunikacyjną wyspą.</p>
-
-    <p>Dotychczasowe, odizolowane plany (rozbudowa drogi S10 omijającej miasto daleko od północy czy doraźne modernizacje dróg krajowych do klasy GP) nie eliminują ryzyk systemowych. Konieczne jest podejście wielowektorowe. Przemodelowanie układu kolejowego, rozbudowa ringu miejskiego oraz wprowadzenie drogi ekspresowej S60 jako jednego z głównych elementów sieci krajowej to współzależne projekty, które muszą zostać zrealizowane przy skoordynowanej współpracy resortów centralnych (MON, MI, MAP), samorządów oraz spółek Skarbu Państwa.</p>
-
-    <hr>
-
-    <h2>2. KRAJOBRAZ BEZPIECZEŃSTWA: STRATEGICZNA FUNKCJA PŁOCKA I IDENTYFIKACJA ZAGROŻEŃ</h2>
-
-    <h3>2.1. Nadzwyczajna koncentracja infrastruktury krytycznej</h3>
-
-    <p>Aglomeracja płocka skupia unikalną w skali europejskiej koncentrację zakładów dużego i zwiększonego ryzyka wystąpienia poważnej awarii przemysłowej (zgodnie z dyrektywą SEVESO III). Kompleks produkcyjny ORLEN S.A. oraz baza surowcowo-magazynowa PERN S.A. odpowiadają za ciągłość dostaw paliwowych dla gospodarki oraz Sił Zbrojnych RP. Ta scentralizowana infrastruktura krytyczna znajduje się obecnie w logistycznym klinczu – transport produktów rafineryjnych i surowców opiera się na kolizyjnych, wąskich drogach jednojezdniowych oraz liniach kolejowych przecinających środek osiedli mieszkaniowych.</p>
-
-    <h3>2.2. Hub transformacji energetycznej i logistyki wodorowej</h3>
-
-    <p>Uzasadnienie natychmiastowej rozbudowy układu transportowego zyskuje nowoczesny wymiar technologiczny. Płock, jako serce Mazowieckiej Doliny Wodorowej, uruchomił już instalacje doczyszczania wodoru i staje się głównym hubem dystrybucyjnym zielonego wodoru dla transportu ciężkiego w Polsce. Przewóz wodoru w tzw. tube-trailerach pod wysokim ciśnieniem (350–500 bar) niesie za sobą gigantyczne wyzwania z zakresu prewencji antyterrorystycznej i ratownictwa. Prowadzenie takiego transportu starymi drogami krajowymi (DK60/DK62) generuje drastyczne ryzyko wypadkowe i sabotażowe. Bezpieczna, bezkolizyjna i odizolowana od miast infrastruktura jest niezbędna do dystrybucji paliwa nowej generacji do odbiorców strategicznych.</p>
-
-    <h3>2.3. Analiza ryzyka i koszt zaniechania działań</h3>
-
-    <p>Utrzymywanie obecnego komunikacyjnego skansenu wokół infrastruktury krytycznej generuje dwa krytyczne ryzyka:</p>
-
-    <ul>
-        <li><strong>Zagrożenie militarne i sabotażowe:</strong> Największym ryzykiem nie jest fizyczne zniszczenie instalacji za pomocą rakiet, lecz logistyczne „zagłodzenie” rafinerii. Jeśli wróg zablokuje starą, jednojezdniową drogę DK60 lub jednotorową linię kolejową jednym rozbitym pojazdem, paraliżuje całe zaopatrzenie i wywóz paliw dla wojska.</li>
-        <li><strong>Stracone szanse ekonomiczne:</strong> Branże wysokich technologii, takie jak sektor IT (Data Center), przemysł chemiczny i wodorowy, poszukują lokalizacji ze stabilnym, zeroemisyjnym źródłem zasilania, jakie oferuje Płock. Firmy te rezygnują z inwestycji w sąsiedztwie Płocka wyłącznie ze względu na barierę transportową, co skutkuje potężną stratą dla polskiej gospodarki.</li>
-    </ul>
-
-    <h3>2.4. Węzeł multimodalny w centrum Polski</h3>
-
-    <p>Płock charakteryzuje się unikalnym położeniem geograficznym – leży w bliskości centralnego węzła drogowego i kolejowego kraju, CPK oraz aglomeracji warszawskiej i łódzkiej. Dodatkowo, położenie nad Wisłą, będącą częścią międzynarodowej drogi wodnej E40, stwarza idealne warunki do budowy w Płocku nowoczesnego węzła multimodalnego, integrującego transport drogowy, kolejowy i śródlądowy dla całej Polski Centralnej.</p>
-
-    <hr>
-
-    <h2>3. INFRASTRUKTURA DROGOWA: SYSTEMY EWAKUACYJNE I ROLA DROGI EKSPRESOWEJ S60</h2>
-
-    <h3>3.1. Likwidacja „Pojedynczego Punktu Awarii” (Single Point of Failure)</h3>
-
-    <p>Obecna sieć drogowa skrajnie centralizuje ruch na węźle Łódź Północ (Stryków) oraz na odcinku autostrady A2 w stronę Warszawy. W warunkach kryzysu paraliż tego jednego węzła zamraża transport w całej centralnej Polsce. Postulowana trasa S60 stanowi w tym systemie jeden z głównych elementów zaradczych – tworzy geometryczną linię prostą będącą potężnym bypasso-obejściem strategicznym, które zdejmuje tranzyt międzynarodowy z osi Warszawa–Łódź zanim dotrze on do zatłoczonego centrum, rozpraszając ryzyko ataku.</p>
-
-    <h3>3.2. Połączenie drogami 2x2 z autostradami A1 i A2</h3>
-
-    <p>Płock wymaga bezpośrednich powiązań drogami klasy ekspresowej (2x2) z autostradami A1 i A2. Są one niezbędne dla służb ratowniczych w razie awarii lub aktów sabotażu, umożliwiając jednoczesną, masową ewakuację ludności ze stref gęstej zabudowy oraz sprawne podejście kolumn wojskowych. Wewnątrz miasta konieczny jest ring w postaci dwujezdniowych dróg klasy GP, G i Z, które bezkolizyjnie wyprowadzą ruch przemysłowy na drogi ekspresowe, separując transport towarów niebezpiecznych (ADR) od ruchu miejskiego.</p>
-
-    <h3>3.3. Pokonanie bariery Wisły w Płocku i zbijanie krytyki planistów</h3>
-
-    <p>Prawobrzeżny, przemysłowy Płock jest odcięty od lewego brzegu rzeki Wisłą, co w obliczu zagrożeń geopolitycznych wymaga budowy nowych, ufortyfikowanych przepraw dokładnie tutaj, a nie kilkadziesiąt kilometrów dalej. Rządowi planiści wysuwają zarzut, że zbliżenie nowej drogi ekspresowej do Płocka tworzy „skumulowany cel” (rafineria + węzeł) dla ataku wroga. Taki tok myślenia jest błędem z perspektywy współczesnej taktyki obronnej NATO:</p>
-
-    <ul>
-        <li>Lokalizacja kombinatu ORLEN jest doskonale znana satelitarnie; wąskie, jednojezdniowe drogi nie ukryją tak ogromnego zakładu.</li>
-        <li>Droga ekspresowa (2x2) daje potężną elastyczność – po uszkodzeniu jednego pasa ruch wciąż może płynnie odbywać się pasem awaryjnym lub drugą jezdnią.</li>
-        <li>Szeroka trasa wokół Płocka, zaprojektowana poza ścisłym terenem zurbanizowanym, tworzy idealne stanowiska manewrowe dla mobilnych systemów obrony przeciwlotniczej i przeciwrakietowej (np. Patriot, Mała Narew), które muszą osłaniać niebo nad rafinerią. Szybka relokacja tych baterii bez szerokich dróg byłaby drastically utrudniona.</li>
-    </ul>
-
-    <p>W związku z tym konieczna jest budowa dwóch przepraw drogowych przez Wisłę:</p>
-
-    <ul>
-        <li><strong>Most w ciągu ringu miejskiego na wysokości Maszewa:</strong> Zaprojektowany jako dedykowana droga ewakuacyjna oraz odizolowany korytarz dla przewozu towarów niebezpiecznych (ADR) z ORLENU, oddzielający transport chemiczny od centrum miasta.</li>
-        <li><strong>Most ekspresowy w ciągu drogi S60 na wysokości Rydzyna:</strong> Nowa, ufortyfikowana przeprawa o najwyższych parametrach militarno-inżynieryjnych (STANAG klasa 150, obciążenie MLC 70/100), zlokalizowana poza centrum, tworząca „linię życia” dla sił szybkiego reagowania podchodzących pod rafinerię z kierunku południowo-zachodniego.</li>
-    </ul>
-
-    <h3>3.4. Przebieg przez Gostynińsko-Włocławski Park Krajobrazowy</h3>
-
-    <p>Budowa postulowanej trasy S60 w optymalnym, bezkolizyjnym śladzie wymusza przejście przez skrajny fragment Gostynińsko-Włocławskiego Parku Krajobrazowego. Brak jest dla tego rozwiązania realnej alternatywy przestrzennej, jeśli priorytetem ma być sprawna ewakuacja ludności z południowych dzielnic Płocka oraz bezkompromisowy transport wojskowy z lewego brzegu Wisły w rejon kompleksu petrochemicznego.</p>
-
-    <hr>
-
-    <h2>4. INFRASTRUKTURA KOLEJOWA: TOWAROWA OBWODNICA I PASAŻERSKI WĘZEŁ MAGISTRALNY</h2>
-
-    <h3>4.1. Towarowa Obwodnica Płocka i odrzucenie wariantu podmiejskiego</h3>
-
-    <p>Spełnienie wymogów bezpieczeństwa publicznego i przepisów SEVESO III wymaga natychmiastowego wyprowadzenia ciężkich składów towarowych z niebezpiecznymi substancjami (wg przepisów RID) z gęsto zaludnionej strefy mieszkalnej miasta na jego obrzeża.</p>
-
-    <ul>
-        <li><strong>Krytyka wariantu przez gminę Stara Biała:</strong> Proponowana wcześniej trasa przez Maszewo Duże, Mańkowo, Wyszynę i Starą Białą drastycznie niszczy szybko rozrastającą się, podmiejską strefę aglomeracji. Obszar ten stanowi funkcjonalne zaplecze miejskie. Wprowadzenie tam ruchu ciężkich składów chemicznych wywoła chaos urbanistyczny i zdewastuje możliwości inwestycyjne regionu, który już teraz traci mieszkańców na rzecz strefy podmiejskiej.</li>
-        <li><strong>Wariant kompromisowy:</strong> Trasę kolejową cargo należy poprowadzić przez mało zaludnione obszary bezpośrednio wzdłuż zachodniej granicy administracyjnej miasta, w okolicach Maszewa i dzielnicy Winiary.</li>
-    </ul>
-
-    <h3>4.2. Łącznica magistralna i nowa przeprawa kolejowa</h3>
-
-    <p>Nowy układ kolejowy aglomeracji musi zostać zintegrowany z siecią krajową i międzynarodową poprzez:</p>
-
-    <ul>
-        <li>Budowę łącznicy kolejowej spinającej nową towarową obwodnicę Płocka bezpośrednio z magistralą CMK-Północ dla sprawnego wywozu masowych transportów RID z ORLENU.</li>
-        <li><strong>Budowę nowego przejścia kolejowego przez Wisłę w okolicach Mostu Solidarności:</strong> Nowa przeprawa ma służyć przede wszystkim obsłudze ruchu osobowego, tworząc bezkolizyjny i wydajny korytarz pasażerski, który odciąży wschodnią część miasta, gdzie główna stacja kolejowa Płock przejmie kluczowe potoki podróżnych. Nowy most będzie kluczowym elementem infrastruktury umożliwiającym płynne prowadzenie pociągów osobowych skręcających w Płocku na południe z nowo planowanej magistrali CMK-Północ.
-        <br><br>
-        Dotychczas eksploatowany, wiekowy most im. Legionów Piłsudskiego posiada krytyczne ograniczenia techniczne jako konstrukcja jednotorowa. Pozostawienie go jako jedynej przeprawy pasażerskiej w obliczu planowanego uruchomienia nowej linii kolejowej Płock – Ciechanów – Przasnysz oraz wspomnianych potoków z CMK-Północ doprowadzi do całkowitej komunikacyjnej niewydolności systemu, a dalsze przeciążanie starego obiektu rodzi realne ryzyko katastrofy budowlanej.
-        <br><br>
-        Jednocześnie nowy most kolejowy będzie pełnił strategiczną rolę jako przeprawa awaryjna dla ciężkich przewozów towarowych z ORLENU oraz transportów militarnych NATO. W sytuacji kryzysowej lub awarii na innych odcinkach, zapewni on niezbędną, dwutorową ciągłość logistyczną i połączy lewobrzeżny węzeł multimodalny z resztą kraju.</li>
-    </ul>
-
-    <hr>
-
-    <h2>5. TRANSWERSALNY KORYTARZ OBRONNY S12/S60: INTEGRACJA LOGISTYCZNA KRAJU</h2>
-
-    <p>Kluczowym elementem drastycznie zwiększającym geopolityczne i militarne znaczenie Drogi Ekspresowej S60 jako jednego z głównych elementów sieci drogowej jest jej bezpośrednia synergia operacyjna z postulowanym przedłużeniem drogi ekspresowej S12 w kierunku zachodnim i południowo-zachodnim. Obie te arterie zbiegają się w strategicznym węźle w okolicach Kalisza i Ostrowa Wielkopolskiego, tworząc jednolity, bezkolizyjny korytarz transwersalny o najwyższym priorytecie obronnym dla wojsk NATO.</p>
-
-    <ul>
-        <li><strong>Połączenie baz Wojska Polskiego i NATO:</strong> Rejon południowo-zachodniej Polski (Dolny Śląsk, Ziemia Lubuska, Wielkopolska) charakteryzuje się najwyższym stopniem nasycenia strategicznymi jednostkami wojskowymi, poligonami oraz centrami logistycznymi sił zbrojnych RP i sojuszników (np. Żagań, Świętoszów). Połączenie postulowanej S12 z trasą S60 otwiera dla tych formacji najkrótszą, bezkompromisową drogę szybkiego przerzutu w kierunku północno-wschodnich rubieży kraju.</li>
-        <li><strong>Najkrótsza i odseparowana marszruta:</strong> Połączony korytarz S12/S60 umożliwia całkowite ominięcie skrajnie przeciążonego łódzkiego oraz warszawskiego węzła transportowego. Gwarantuje to bezpośredni i błyskawiczny przerzut ciężkich transportów wojskowych z głębi kraju pod newralgiczne rejony przygraniczne: granicę z obwodem królewieckim, granicę polsko-białoruską, Przesmyk Suwalski oraz dalej, ku państwom bałtyckim.</li>
-        <li><strong>Płock jako strategiczne zaplecze paliwowe w marszu:</strong> W tak skonstruowanej osi transportowej Płock staje się kluczowym, centralnym portem zaopatrzeniowym dla operujących wojsk. Masowe kolumny i transporty logistyczne poruszające się z południowego zachodu mogą w sposób bezkolizyjny i bezpieczny (odizolowany od centrów miast) zatankować oraz pobrać paliwa klasyczne i wodorowe bezpośrednio z płockiego kombinatu rafineryjnego, kontynuując natychmiastowy marsz w stronę teatru działań wojennych.</li>
-    </ul>
-
-    <hr>
+    <div class="map-section">
+        <img src="droga-ekspresowa-s60.png" alt="Przebieg postulowanej drogi ekspresowej S60" onclick="openLightbox(this)">
+        <div class="map-caption">Rysunek 2. Postulowany korytarz Drogi Ekspresowej S60</div>
+        <a href="https://github.iodroga-ekspresowa-s60.html" class="btn-original" target="_blank">📥 Otwórz mapę w oryginalnym rozmiarze</a>
+    </div>
 
     <h2>PODSUMOWANIE</h2>
+    <p>Inwestycje te spełniają kryteria infrastruktury podwójnego zastosowania (Dual-Use) i są niezbędne dla logistyki oraz obronności państwa.</p>
 
-    <p>Radykalna modernizacja i rozbudowa układu transportowego Płocka to warunek konieczny dla utrzymania bezpieczeństwa paliwowo-energetycznego Polski. Nowa Towarowa Obwodnica Kolejowa, pasażerski most przez Wisłę, ring miejski oraz postulowana droga ekspresowa S60 stanowią zintegrowane, wzajemnie dopełniające się filary nowoczesnej sieci logistycznej. Wymienione potrzeby infrastrukturalne są relatywnie niskim kosztem wobec tego, ile procent polskiego PKB od dekad, obecnie, jak i w przyszłości będzie wypracowywać płocki ośrodek przemysłowy.</p>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Powiększony widok mapy">
+    </div>
 
-    <p>Inwestycje te stanowią finansową i logistyczną polisę bezpieczeństwa kraju. Całość założeń w 100% spełnia unijne kryteria infrastruktury podwójnego zastosowania (Dual-Use), co otwiera drogę do finansowania z funduszy programu CEF Transport - Military Mobility oraz z krajowego budżetu obronnego przekraczającego 4,7% PKB. Najważniejszy węzeł energetyczny, paliwowy i wodorowy Polski musi przestać być komunikacyjną wyspą.</p>
-
+    <script>
+        function openLightbox(element) {
+            document.getElementById('lightbox-img').src = element.src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') { closeLightbox(); }
+        });
+    </script>
 </body>
 </html>
