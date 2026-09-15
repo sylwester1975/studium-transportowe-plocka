@@ -388,3 +388,21 @@
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
+                <img id="lightbox-img" src="" alt="Powiększony widok mapy">
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            document.getElementById('lightbox-img').src = element.src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') { closeLightbox(); }
+        });
+    </script>
+</body>
+</html>
+
