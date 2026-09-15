@@ -77,6 +77,7 @@
             text-align: center;
             background-color: white;
             -webkit-overflow-scrolling: touch;
+            box-sizing: border-box;
         }
 
         img {
@@ -104,7 +105,8 @@
                 height: auto;
             }
             .map-wrapper {
-                height: calc(100vh - 100px);
+                height: auto;
+                min-height: calc(100vh - 100px);
             }
             .title { font-size: 13px; }
             .button-group { width: 100%; }
@@ -149,7 +151,7 @@
         <img src="droga-ekspresowa-s60.png" 
              id="mapaS60" 
              onclick="toggleZoom(event)" 
-             alt="Przebieg postulowanej drogi ekspresowej S60" 
+             alt="Postulowany korytarz Drogi Ekspresowej S60" 
              decoding="async">
     </div>
 
@@ -160,7 +162,8 @@
             const hint = document.getElementById('hint-bar');
             if (hint) { hint.style.display = 'none'; }
 
-            const img = document.getElementById('mapaS10');
+            // NAPRAWIONE: Zmieniono z 'mapaS10' na właściwe 'mapaS60'
+            const img = document.getElementById('mapaS60');
             const wrapper = document.getElementById('mapWrapper');
             const isZoomingIn = !img.classList.contains('zoomed');
 
@@ -198,9 +201,4 @@
         }
     </script>
 </body>
-<style>html{
- color:darkviolet;
- font-size:25px;
- font-weight:600;
-}
-</style><script>/*Here write your javascript code*/</script></html>
+</html>
