@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -132,6 +134,45 @@
             font-weight: bold;
             cursor: pointer;
         }
+        .toc-box {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 35px 0;
+        }
+        .toc-title {
+            font-weight: bold;
+            color: #1a365d;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .toc-list {
+            list-style-type: none !important;
+            padding-left: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        .toc-list li {
+            margin-bottom: 8px !important;
+            font-size: 0.95rem;
+            text-align: left !important;
+            text-align-last: left !important;
+        }
+        .toc-list a {
+            color: #2b6cb0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .toc-list a:hover {
+            color: #1a365d;
+            text-decoration: underline;
+        }
+        .toc-sublist {
+            list-style-type: none !important;
+            padding-left: 20px !important;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -147,19 +188,48 @@
     <p>Osiągnięcie pełnej odporności logistycznej i gospodarczej tego kluczowego hubu przemysłowego wymaga równoległego wdrożenia zintegrowanego pakietu rozwiązań infrastrukturalnych, opierającego się na czterech głównych filarach:</p>
 
     <div class="highlight-box">
-    <ul>
-        <li><strong>FILAR KOLEJOWY TOWAROWY:</strong> Wyprowadzenie ciężkich transportów towarów niebezpiecznych (RID) z gęsto zaludnionych stref miejskich poprzez budowę nowej Towarowej Obwodnicy Płocka (wariant zachodni) oraz integrację węzła z magistralą CMK-Północ.</li>
-        <li><strong>FILAR KOLEJOWY PASAŻERSKO-AWARYJNY:</strong> Budowa nowoczesnej, dwutorowej przeprawy kolejowej przez Wisłę na wysokości Mostu Solidarności dla obsługi nowych potoków pasażerskich (linia Płock – Ciechanów – Przasnysz oraz zjazdy z CMK-Północ) wraz z zapewnieniem funkcji strategicznego bypassu towarowego i wojskowego.</li>
-        <li><strong>FILAR DROGOWY LOKALNY:</strong> Domknięcie dwujezdniowego ringu miejskiego (klasa GP) wraz z budową nowego mostu drogowego na wysokości Maszewa, dedykowanego dla separacji transportu chemicznego (ADR) od potoków miejskich i ewakuacyjnych.</li>
-        <li><strong>FILAR DROGOWY KRAJOWY:</strong> Wdrożenie do krajowych planów strukturalnych projektu Drogi Ekspresowej S60 na trasie Kalisz – Płock – Zambrów, pełniącej rolę strategicznego obejścia przeciążonego węzła Stryków oraz stanowiącej element transwersalnego korytarza obronnego NATO we współpracy z drogą S12.</li>
-    </ul>
+        <ul>
+            <li><strong>FILAR KOLEJOWY TOWAROWY:</strong> Wyprowadzenie ciężkich transportów towarów niebezpiecznych (RID) z gęsto zaludnionych stref miejskich poprzez budowę nowej Towarowej Obwodnicy Płocka (wariant zachodni) oraz integrację węzła z magistralą CMK-Północ.</li>
+            <li><strong>FILAR KOLEJOWY PASAŻERSKO-AWARYJNY:</strong> Budowa nowoczesnej, dwutorowej przeprawy kolejowej przez Wisłę na wysokości Mostu Solidarności dla obsługi nowych potoków pasażerskich (linia Płock – Ciechanów – Przasnysz oraz zjazdy z CMK-Północ) wraz z zapewnieniem funkcji strategicznego bypassu towarowego i wojskowego.</li>
+            <li><strong>FILAR DROGOWY LOKALNY:</strong> Domknięcie dwujezdniowego ringu miejskiego (klasa GP) wraz z budową nowego mostu drogowego na wysokości Maszewa, dedykowanego dla separacji transportu chemicznego (ADR) od potoków miejskich i ewakuacyjnych.</li>
+            <li><strong>FILAR DROGOWY KRAJOWY:</strong> Wdrożenie do krajowych planów strukturalnych projektu Drogi Ekspresowej S60 na trasie Kalisz – Płock – Zambrów, pełniącej rolę strategicznego obejścia przeciążonego węzła Stryków oraz stanowiącej element transwersalnego korytarza obronnego NATO we współpracy z drogą S12.</li>
+        </ul>
     </div>
-        
+
     <p>Warunkiem synergii tych działań jest systemowe i ciągłe dostosowywanie parametrów technicznych publicznej sieci transportowej do dynamicznie zmieniających się potrzeb technologicznych i surowcowych strategicznych zakładów przemysłowych Płocka.</p>
 
     <p>Zintegrowane inwestycje w rejonie Płocka spełniają w 100% kryteria infrastruktury podwójnego zastosowania (Dual-Use) i kwalifikują się do natychmiastowego dofinansowania z budżetu unijnego Military Mobility oraz krajowych środków obronnych.</p>
 
-    <hr>
+    <div class="toc-box">
+        <div class="toc-title">Spis treści – szybkie przejście:</div>
+        <ul class="toc-list">
+            <li><a href="#wstep">1. Wstęp i istota problemów strategicznych</a></li>
+            <li><a href="#krajobraz">2. Krajobraz bezpieczeństwa: Strategiczna funkcja Płocka i identyfikacja zagrożeń</a>
+                <ul class="toc-sublist">
+                    <li><a href="#koncentracja">– 2.1. Nadzwyczajna koncentracja infrastruktury krytycznej</a></li>
+                    <li><a href="#hub">– 2.2. Hub transformacji energetycznej i logistyki wodorowej</a></li>
+                    <li><a href="#analiza">– 2.3. Analiza ryzyka i koszt zaniechania działań</a></li>
+                    <li><a href="#wezel">– 2.4. Węzeł multimodalny w centrum Polski</a></li>
+                </ul>
+            </li>
+            <li><a href="#drogowa">3. Infrastruktura drogowa: Systemy ewakuacyjne i rola Drogi Ekspresowej S60</a>
+                <ul class="toc-sublist">
+                    <li><a href="#awaria">– 3.1. Likwidacja „Pojedynczego Punktu Awarii”</a></li>
+                    <li><a href="#polaczenie">– 3.2. Połączenie z siecią dróg szybkiego ruchu</a></li>
+                    <li><a href="#wisla">– 3.3. Pokonanie bariery Wisły w Płocku</a></li>
+                    <li><a href="#park">– 3.4. Przebieg przez Gostynińsko-Włocławski Park Krajobrazowy</a></li>
+                </ul>
+            </li>
+            <li><a href="#kolejowa">4. Infrastruktura kolejowa: Towarowa Obwodnica i pasażerski węzeł magistralny</a>
+                <ul class="toc-sublist">
+                    <li><a href="#obwodnica">– 4.1. Towarowa Obwodnica Płocka</a></li>
+                    <li><a href="#lacznica">– 4.2. Łącznica magistralna i nowa przeprawa kolejowa</a></li>
+                    <li><a href="#os">– 4.3. Kolejowa Oś Strategiczna Północ-Południe</a></li>
+                </ul>
+            </li>
+            <li><a href="#korytarz">5. Transwersalny korytarz obronny S12/S60: Integracja logistyczna kraju</a></li>
+            <li><a href="#podsumowanie">Podsumowanie</a></li>
+        </ul>
 
     <h2>1. WSTĘP I ISTOTA PROBLEMÓW STRATEGICZNYCH</h2>
 
