@@ -237,21 +237,23 @@
                 background-color: #ebf8ff !important;
                 border-left: 4px solid #3182ce !important;
             }
-            /* Wyświetlamy ukrytą na co dzień stopkę z adresem URL na dole każdej wydrukowanej strony */
+            /* NOWA, POPRAWIONA STOPKA - Wyświetlamy bezpieczną stopkę z adresem URL na dole pliku PDF */
             .print-footer {
                 display: block !important;
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                text-align: center;
-                font-size: 0.8rem;
-                color: #718096;
-                border-top: 1px solid #e2e8f0;
-                padding-top: 5px;
-                background-color: white;
+                position: absolute !important;
+                bottom: 20px !important;
+                left: 0 !important;
+                width: 100% !important;
+                text-align: center !important;
+                font-size: 0.85rem !important;
+                color: #2d3748 !important;
+                border-top: 1px solid #cbd5e0 !important;
+                padding-top: 8px !important;
+                background-color: white !important;
+                z-index: 9999 !important;
             }
         }
+
 
     </style>
 </head>
@@ -511,10 +513,11 @@
     </script>
         <!-- Przycisk Przewiń do góry -->
     <a href="#" class="btn-to-top" title="Przewiń do góry">⬆</a>
-        <!-- Ukryta stopka z adresem URL - widoczna tylko na wydrukach i w plikach PDF -->
+    <!-- Ukryta stopka z adresem URL - widoczna tylko na wydrukach i w plikach PDF -->
     <div class="print-footer" style="display: none;">
         Pełna, interaktywna wersja studium wraz z mapami wysokiej rozdzielczości dostępna online pod adresem: https://netlify.app
     </div>
+
 
 </body>
 </html>
