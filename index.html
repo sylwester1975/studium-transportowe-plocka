@@ -354,7 +354,7 @@
     </div>
 
     <!-- Ukryty element powiadomienia o skopiowaniu -->
-    <div id="toast-share">🔗 Link do studium został skopiowany do schowka!</div>
+    <div id="toast-share" style="display: none;">🔗 Link do studium został skopiowany do schowka!</div>
 
     <hr>
 
@@ -544,26 +544,28 @@ Używaj kodu z rozwagą.Pamiętaj, aby po usunięciu starego i upewnieniu się,
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') { closeLightbox(); }
         });
-    </script>
-    <!-- Przycisk Przewiń do góry - płynnie przewija i wymusza czysty adres główny -->
-    <a href="javascript:void(0);" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); history.pushState(null, null, window.location.pathname);" class="btn-to-top" title="Przewiń do góry">⬆</a>
-    <!-- Ukryta stopka z adresem URL - widoczna tylko na wydrukach i w plikach PDF -->
-    <div class="print-footer" style="display: none;">
-        Pełna, interaktywna wersja studium wraz z mapami wysokiej rozdzielczości dostępna online pod adresem: https://studium-transportowe-plocka.netlify.app/
-    </div>
     <script>
         function copyCurrentLink() {
             // Pobiera aktualny, czysty adres bez końcówek hash i kopiuje do schowka
             const cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
             navigator.clipboard.writeText(cleanUrl).then(() => {
                 const toast = document.getElementById('toast-share');
-                toast.classList.add('show');
+                
+                // Włączamy widoczność elementu jako wyskakujący boks
+                toast.style.display = 'block';
+                toast.style.opacity = '1';
+                
+                // Po 2,5 sekundach płynnie ukrywamy element z powrotem
                 setTimeout(() => {
-                    toast.classList.remove('show');
+                    toast.style.opacity = '0';
+                    setTimeout(() => {
+                        toast.style.display = 'none';
+                    }, 300); // Czas na wykonanie animacji zanikania
                 }, 2500);
             });
         }
     </script>
+
 
 
 </body>
