@@ -237,23 +237,20 @@
                 background-color: #ebf8ff !important;
                 border-left: 4px solid #3182ce !important;
             }
-            /* NOWA, POPRAWIONA STOPKA - Wyświetlamy bezpieczną stopkę z adresem URL na dole pliku PDF */
+            /* NOWA, BEZPIECZNA STOPKA KOŃCOWA - Ułoży się pod Podsumowaniem i nie przesłoni tekstu */
             .print-footer {
                 display: block !important;
-                position: absolute !important;
-                bottom: 20px !important;
-                left: 0 !important;
-                width: 100% !important;
+                position: relative !important;
+                margin-top: 50px !important; /* Bezpieczny, duży odstęp od tekstu podsumowania */
+                padding-top: 15px !important;
+                border-top: 2px solid #1a365d !important; /* Elegancka, grubsza ciemnoniebieska linia odcinająca */
                 text-align: center !important;
-                font-size: 0.85rem !important;
+                font-size: 0.9rem !important;
                 color: #2d3748 !important;
-                border-top: 1px solid #cbd5e0 !important;
-                padding-top: 8px !important;
+                font-weight: bold !important;
                 background-color: white !important;
-                z-index: 9999 !important;
+                page-break-inside: avoid !important;
             }
-        }
-
 
     </style>
 </head>
