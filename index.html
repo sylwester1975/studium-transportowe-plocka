@@ -234,14 +234,13 @@
                 background-color: #ebf8ff !important;
                 border-left: 4px solid #3182ce !important;
             }
-            /* BEZBŁĘDNA STOPKA DO PDF - Tworzy osobną przestrzeń na dole i nie znika */
+            /* IDEALNA STOPKA POD PODPISEM - Bez tworzenia nowej pustej strony */
             .print-footer {
                 display: block !important;
                 position: relative !important;
-                page-break-before: always !important; /* Wymusza nową stronę lub bezpieczny dół pliku PDF */
-                margin-top: 30px !important;
+                margin-top: 40px !important; /* Bezpieczny odstęp pod Twoim podpisem */
                 padding-top: 15px !important;
-                border-top: 2px solid #1a365d !important;
+                border-top: 2px solid #1a365d !important; /* Ciemnoniebieska linia odcinająca */
                 text-align: center !important;
                 font-size: 0.9rem !important;
                 color: #2d3748 !important;
