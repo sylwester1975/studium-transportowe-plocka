@@ -219,6 +219,39 @@
                 border-left: 4px solid #3182ce !important;
             }
         }
+        /* Reguły dla automatycznego generowania pliku PDF i druku */
+        @media print {
+            /* Ukrywamy przyciski otwierania map, przycisk PDF oraz przycisk Do Góry */
+            .btn-original, .btn-to-top, button {
+                display: none !important;
+            }
+            /* Wymuszamy zachowanie kolorów teł w boksach strategicznych na każdym komputerze */
+            body {
+                background-color: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .highlight-box, .toc-box {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background-color: #ebf8ff !important;
+                border-left: 4px solid #3182ce !important;
+            }
+            /* Wyświetlamy ukrytą na co dzień stopkę z adresem URL na dole każdej wydrukowanej strony */
+            .print-footer {
+                display: block !important;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                font-size: 0.8rem;
+                color: #718096;
+                border-top: 1px solid #e2e8f0;
+                padding-top: 5px;
+                background-color: white;
+            }
+        }
 
     </style>
 </head>
@@ -478,6 +511,11 @@
     </script>
         <!-- Przycisk Przewiń do góry -->
     <a href="#" class="btn-to-top" title="Przewiń do góry">⬆</a>
+        <!-- Ukryta stopka z adresem URL - widoczna tylko na wydrukach i w plikach PDF -->
+    <div class="print-footer" style="display: none;">
+        Pełna, interaktywna wersja studium wraz z mapami wysokiej rozdzielczości dostępna online pod adresem: https://netlify.app
+    </div>
+
 </body>
 </html>
 
