@@ -200,6 +200,25 @@
             background-color: #2b6cb0;
             transform: scale(1.05);
         }
+        /* Reguły dla automatycznego generowania pliku PDF i druku */
+        @media print {
+            /* Ukrywamy przyciski otwierania map, przycisk PDF oraz przycisk Do Góry */
+            .btn-original, .btn-to-top, button {
+                display: none !important;
+            }
+            /* Wymuszamy zachowanie kolorów teł w boksach strategicznych na każdym komputerze */
+            body {
+                background-color: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .highlight-box, .toc-box {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background-color: #ebf8ff !important;
+                border-left: 4px solid #3182ce !important;
+            }
+        }
 
     </style>
 </head>
@@ -266,6 +285,11 @@
             <li><a href="#mapa2">🗺️ Rysunek 2. Postulowany korytarz Drogi Ekspresowej S60</a></li>
             <li><a href="#mapa3">🗺️ Rysunek 3. Kolejowa Oś Strategiczna Północ-Południe</a></li>
         </ul>
+    </div>
+    <div style="text-align: center; margin: 20px 0 35px 0;">
+        <button onclick="window.print()" class="btn-original" style="background-color: #c53030; font-size: 1rem; padding: 12px 24px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.2s;">
+            📄 Wygeneruj i pobierz pełne studium w formacie PDF (Gotowe do druku)
+        </button>
     </div>
 
     <hr>
