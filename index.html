@@ -508,8 +508,8 @@
             if (event.key === 'Escape') { closeLightbox(); }
         });
     </script>
-    <!-- Przycisk Przewiń do góry - przewija płynnie bez zmieniania adresu URL -->
-    <a href="javascript:void(0);" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="btn-to-top" title="Przewiń do góry">⬆</a>
+    <!-- Przycisk Przewiń do góry - płynnie przewija i wymusza czysty adres główny -->
+    <a href="javascript:void(0);" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); history.pushState(null, null, window.location.pathname);" class="btn-to-top" title="Przewiń do góry">⬆</a>
     <!-- Ukryta stopka z adresem URL - widoczna tylko na wydrukach i w plikach PDF -->
     <div class="print-footer" style="display: none;">
         Pełna, interaktywna wersja studium wraz z mapami wysokiej rozdzielczości dostępna online pod adresem: https://studium-transportowe-plocka.netlify.app/
