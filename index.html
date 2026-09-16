@@ -251,6 +251,27 @@
                 background-color: white !important;
                 page-break-inside: avoid !important;
             }
+        /* Styl powiadomienia o skopiowaniu linku */
+        #toast-share {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2d3748;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10000;
+            pointer-events: none;
+        }
+        #toast-share.show {
+            opacity: 1;
+        }
 
     </style>
 </head>
