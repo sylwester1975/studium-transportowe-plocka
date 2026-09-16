@@ -234,11 +234,12 @@
                 background-color: #ebf8ff !important;
                 border-left: 4px solid #3182ce !important;
             }
-            /* Bezpieczna, relatywna stopka końcowa na samym dole pliku PDF */
+            /* BEZBŁĘDNA STOPKA DO PDF - Tworzy osobną przestrzeń na dole i nie znika */
             .print-footer {
                 display: block !important;
                 position: relative !important;
-                margin-top: 50px !important;
+                page-break-before: always !important; /* Wymusza nową stronę lub bezpieczny dół pliku PDF */
+                margin-top: 30px !important;
                 padding-top: 15px !important;
                 border-top: 2px solid #1a365d !important;
                 text-align: center !important;
@@ -246,9 +247,9 @@
                 color: #2d3748 !important;
                 font-weight: bold !important;
                 background-color: white !important;
-                page-break-inside: avoid !important;
+                width: 100% !important;
             }
-        }
+
     </style>
 </head>
 
@@ -552,12 +553,21 @@
             }
         }
 
-        // Zamknięcie Lightboxa klawiszem Escape
+            // Zamknięcie Lightboxa klawiszem Escape
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeLightbox();
             }
         });
     </script>
+
+    <!-- Ukryta stopka z adresem URL - wyświetli się WYŁĄCZNIE na samej ostatniej stronie pliku PDF -->
+    <div class="print-footer" style="display: none;">
+        Pełna, interaktywna wersja studium wraz z mapami wysokiej rozdzielczości dostępna online pod adresem: https://netlify.app
+    </div>
+
+    <!-- Przycisk Przewiń do góry - płynnie przewija i wymusza czysty adres główny w przeglądarce -->
+    <a href="javascript:void(0);" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); history.pushState(null, null, window.location.pathname);" class="btn-to-top" title="Przewiń do góry">⬆</a>
 </body>
 </html>
+
