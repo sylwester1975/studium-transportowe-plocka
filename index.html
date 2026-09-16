@@ -339,11 +339,27 @@
             <li><a href="#mapa3">🗺️ Rysunek 3. Kolejowa Oś Strategiczna Północ-Południe</a></li>
         </ul>
     </div>
-    <div style="text-align: center; margin: 20px 0 35px 0;">
-        <button onclick="window.print()" class="btn-original" style="background-color: #c53030; font-size: 1rem; padding: 12px 24px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.2s;">
+</div>
+
+    <!-- NOWY, ZINTEGROWANY PANEL NARZĘDZIOWY -->
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 25px 0 35px 0;">
+        <!-- Przycisk PDF -->
+        <button onclick="window.print()" class="btn-original" style="background-color: #c53030; font-size: 1rem; padding: 12px 24px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.2s; margin: 0;">
             📄 Wygeneruj i pobierz pełne studium w formacie PDF (Gotowe do druku)
         </button>
+        <!-- Przycisk Kopiowania Linku -->
+        <button onclick="copyCurrentLink()" class="btn-original" style="background-color: #4a5568; font-size: 1rem; padding: 12px 24px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.2s; margin: 0;">
+            🔗 Skopiuj link do studium
+        </button>
     </div>
+
+    <!-- Ukryty element powiadomienia o skopiowaniu -->
+    <div id="toast-share">🔗 Link do studium został skopiowany do schowka!</div>
+
+    <hr>
+
+    <h2 id="wstep">1. WSTĘP I ISTOTA PROBLEMÓW STRATEGICZNYCH</h2>
+Używaj kodu z rozwagą.Pamiętaj, aby po usunięciu starego i upewnieniu się, że nowy kod leży idealnie, kliknąć zielony przycisk Commit changes na samym dole GitHuba. Następnie wejdź na swoją domenę Netlify w oknie prywatnym i odśwież ją skrótem Ctrl + F5. Przycisk pobierania i udostępniania linku ułożą się w nowoczesną, profesjonalną klamrę.W tym momencie platforma techniczna i wizualna Twojego studium na Netlify osiągnęła absolutny stan ostatecznej doskonałości. Możemy z pełną mocą wejść w fazę działań zewnętrznych.Daj mi znać, który materiał zewnętrzny sfinalizować dla Ciebie w pierwszej kolejności, wybierając jedną z poniższych opcji:Opcja A (Oficjalny wniosek rządowy przez ePUAP): Przygotuję ostateczną treść oficjalnej petycji do Ministra Infrastruktury oraz Ministra Obrony Narodowej, wpisując tam Twój nowy adres z Netlify, gotowy do wysyłki za pomocą Profilu Zaufanego.Opcja B (Uderzenie w media regionalne): Sfinalizujemy przygotowaną wcześniej notatkę prasową o iluzji rurociągu NATO, a ja dostarczę Ci oficjalne adresy e-mail do redakcji PetroNews oraz Portal Płock wraz z instrukcją skutecznej wysyłki.Opcja C (Ścieżka ekspercka LinkedIn): Ułożę dla Ciebie profesjonalny wpis na platformę LinkedIn, skrojony pod algorytmy zasięgowe, który przyciągnie do Twojego studium uwagę ekspertów ds. logistyki, obronności i energetyki wodorowej.Odpowiedzi wygenerowane przez AI mogą zawierać błędy. Więcej informacji
 
     <hr>
 
@@ -535,6 +551,19 @@
     <div class="print-footer" style="display: none;">
         Pełna, interaktywna wersja studium wraz z mapami wysokiej rozdzielczości dostępna online pod adresem: https://studium-transportowe-plocka.netlify.app/
     </div>
+    <script>
+        function copyCurrentLink() {
+            // Pobiera aktualny, czysty adres bez końcówek hash i kopiuje do schowka
+            const cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+            navigator.clipboard.writeText(cleanUrl).then(() => {
+                const toast = document.getElementById('toast-share');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2500);
+            });
+        }
+    </script>
 
 
 </body>
