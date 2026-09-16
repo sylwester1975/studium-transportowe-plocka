@@ -173,7 +173,7 @@
             margin-top: 5px;
             margin-bottom: 5px;
         }
-                /* Płynne przewijanie całej strony */
+        /* Płynne przewijanie całej strony */
         html {
             scroll-behavior: smooth;
         }
@@ -200,58 +200,7 @@
             background-color: #2b6cb0;
             transform: scale(1.05);
         }
-        /* Reguły dla automatycznego generowania pliku PDF i druku */
-        @media print {
-            /* Ukrywamy przyciski otwierania map, przycisk PDF oraz przycisk Do Góry */
-            .btn-original, .btn-to-top, button {
-                display: none !important;
-            }
-            /* Wymuszamy zachowanie kolorów teł w boksach strategicznych na każdym komputerze */
-            body {
-                background-color: white !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            .highlight-box, .toc-box {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-                background-color: #ebf8ff !important;
-                border-left: 4px solid #3182ce !important;
-            }
-        }
-        /* Reguły dla automatycznego generowania pliku PDF i druku */
-        @media print {
-            /* Ukrywamy przyciski otwierania map, przycisk PDF oraz przycisk Do Góry */
-            .btn-original, .btn-to-top, button {
-                display: none !important;
-            }
-            /* Wymuszamy zachowanie kolorów teł w boksach strategicznych na każdym komputerze */
-            body {
-                background-color: white !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            .highlight-box, .toc-box {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-                background-color: #ebf8ff !important;
-                border-left: 4px solid #3182ce !important;
-            }
-            /* NOWA, BEZPIECZNA STOPKA KOŃCOWA - Ułoży się pod Podsumowaniem i nie przesłoni tekstu */
-            .print-footer {
-                display: block !important;
-                position: relative !important;
-                margin-top: 50px !important; /* Bezpieczny, duży odstęp od tekstu podsumowania */
-                padding-top: 15px !important;
-                border-top: 2px solid #1a365d !important; /* Elegancka, grubsza ciemnoniebieska linia odcinająca */
-                text-align: center !important;
-                font-size: 0.9rem !important;
-                color: #2d3748 !important;
-                font-weight: bold !important;
-                background-color: white !important;
-                page-break-inside: avoid !important;
-            }
-        /* Styl powiadomienia o skopiowaniu linku */
+        /* Styl powiadomienia o skopiowaniu linku (Toast) */
         #toast-share {
             position: fixed;
             bottom: 30px;
@@ -269,12 +218,40 @@
             z-index: 10000;
             pointer-events: none;
         }
-        #toast-share.show {
-            opacity: 1;
+        /* Jedne, czyste i bezbłędne reguły dla generowania pliku PDF i druku */
+        @media print {
+            .btn-original, .btn-to-top, button, #toast-share {
+                display: none !important;
+            }
+            body {
+                background-color: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .highlight-box, .toc-box {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background-color: #ebf8ff !important;
+                border-left: 4px solid #3182ce !important;
+            }
+            /* Bezpieczna, relatywna stopka końcowa na samym dole pliku PDF */
+            .print-footer {
+                display: block !important;
+                position: relative !important;
+                margin-top: 50px !important;
+                padding-top: 15px !important;
+                border-top: 2px solid #1a365d !important;
+                text-align: center !important;
+                font-size: 0.9rem !important;
+                color: #2d3748 !important;
+                font-weight: bold !important;
+                background-color: white !important;
+                page-break-inside: avoid !important;
+            }
         }
-
     </style>
 </head>
+
 <body>
 
     <h1>STUDIUM STRATEGICZNE: KONIECZNOŚĆ GRUNTOWNEJ MODERNIZACJI I ROZBUDOWY UKŁADU TRANSPORTOWEGO PŁOCKA JAKO KLUCZOWEGO OŚRODKA BEZPIECZEŃSTWA PALIWOWO-ENERGETYCZNEGO POLSKI</h1>
@@ -528,36 +505,23 @@ Używaj kodu z rozwagą.Pamiętaj, aby po usunięciu starego i upewnieniu się,
         Sylwester Fiet &nbsp;|&nbsp; Płock &nbsp;|&nbsp; 2026
     </div>
 
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+       <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
-                <img id="lightbox-img" src="" alt="Powiększony widok mapy">
+        <img id="lightbox-img" src="" alt="Powiększony widok mapy">
     </div>
 
-    <script>
-        function openLightbox(element) {
-            document.getElementById('lightbox-img').src = element.src;
-            document.getElementById('lightbox').style.display = 'flex';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') { closeLightbox(); }
-        });
     <!-- Przycisk Przewiń do góry - płynnie przewija i wymusza czysty adres główny w przeglądarce -->
     <a href="javascript:void(0);" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); history.pushState(null, null, window.location.pathname);" class="btn-to-top" title="Przewiń do góry">⬆</a>
 
     <script>
         // 1. FUNKCJA KOPIOWANIA LINKU DO SCHOWKA Z TOASTEM
         function copyCurrentLink() {
-            // Pobiera aktualny, czysty adres bez końcówek hash i kopiuje do schowka
             const cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
             navigator.clipboard.writeText(cleanUrl).then(() => {
                 const toast = document.getElementById('toast-share');
                 
                 // Włączamy widoczność elementu jako wyskakujący boks
                 toast.style.display = 'block';
-                // Wymuszamy chwilę zwłoki na odczytanie display block przed animacją opacity
                 setTimeout(() => {
                     toast.style.opacity = '1';
                 }, 10);
@@ -567,7 +531,7 @@ Używaj kodu z rozwagą.Pamiętaj, aby po usunięciu starego i upewnieniu się,
                     toast.style.opacity = '0';
                     setTimeout(() => {
                         toast.style.display = 'none';
-                    }, 300); // Czas na wykonanie animacji zanikania
+                    }, 300);
                 }, 2500);
             }).catch(err => {
                 console.error('Błąd podczas kopiowania linku: ', err);
@@ -600,10 +564,5 @@ Używaj kodu z rozwagą.Pamiętaj, aby po usunięciu starego i upewnieniu się,
             }
         });
     </script>
-
-
-
-
 </body>
 </html>
-
