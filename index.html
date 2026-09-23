@@ -248,7 +248,41 @@
                 background-color: white !important;
                 width: 100% !important;
             }
+/* Nowoczesny przycisk pobierania grafiki */
+.btn-download-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
 
+.btn-download-png {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4a5568; /* Twój systemowy kolor grafitowy */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px; /* Eleganckie, zaokrąglone rogi */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Efekt po najechaniu myszką (delikatne przyciemnienie) */
+.btn-download-png:hover {
+    background-color: #2d3748; 
+    transform: translateY(-1px);
+}
+
+.btn-download-png:active {
+    transform: translateY(0);
+}
     </style>
 </head>
 
