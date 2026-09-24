@@ -432,6 +432,23 @@
                 width: 100% !important;
             }
         }
+        /* Inteligentny kontener pozycjonujący podpis do prawej krawędzi */
+        .signature-wrapper {
+            display: flex !important;
+            justify-content: flex-end !important; /* Wymusza przesunięcie zawartości na sam koniec prawej strony */
+            width: 100% !important;
+            margin-top: 50px !important;
+            margin-bottom: 20px !important;
+        }
+
+        /* Nowy, niezależny styl dla samego tekstu sygnatury */
+        .signature-text-final {
+            color: #4a5568 !important; /* Twój biznesowy grafit */
+            font-size: 0.95rem !important;
+            font-weight: bold !important;
+            letter-spacing: 0.5px !important;
+            text-align: right !important;
+        }
 
     </style>
 </head>
@@ -933,7 +950,9 @@
 
     <p>Podsumowując, zintegrowana realizacja wszystkich postulowanych projektów infrastrukturalnych – w&nbsp;pełni uzasadniona strategicznym położeniem geograficznym Płocka w&nbsp;geometrycznym centrum kraju oraz nad kluczowym korytarzem Wisły – stanowi nieodzowny fundament rozwiązujący krytyczne problemy logistyczne regionu. Choć wdrożenie tej koncepcji wiąże się z&nbsp;poważnymi nakładami budżetowymi, to w&nbsp;ostatecznym bilansie makroekonomicznym generuje ono potężną, bezprecedensową wartość dodaną. Inwestycje te trwale zabezpieczają ciągłość operacyjną serca surowcowego kraju, rekonfigurują mapę transportową Polski Centralnej i&nbsp;wznoszą odporność strategiczną wschodniej flanki NATO na najwyższy poziom bezpieczeństwa kontynentalnego.</p>
     
-    <p class="author-signature">Sylwester Fiet &nbsp;|&nbsp; Płock &nbsp;|&nbsp; 2026</p>
+    <div class="signature-wrapper">
+        <span class="signature-text-final">Sylwester Fiet &nbsp;|&nbsp; Płock &nbsp;|&nbsp; 2026</span>
+    </div>
 
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
