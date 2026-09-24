@@ -283,6 +283,50 @@
 .btn-download-png:active {
     transform: translateY(0);
 }
+            /* 1. Globalne ustawienia tekstu i interlinii */
+p, li, td, div {
+    line-height: 1.6; /* Idealna, oddechy między wierszami */
+}
+
+/* 2. Systemowe ujednolicenie Spisu Treści */
+.toc-list {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+}
+.toc-list li {
+    margin-bottom: 8px;
+}
+.toc-sublist {
+    list-style-type: none !important;
+    padding-left: 20px !important; /* Równe, estetyczne wcięcie podpunktów */
+    margin-top: 4px;
+}
+
+/* 3. Resetowanie długich list analitycznych (Rozdział 4.2 i Rozdział 2.3) */
+.clean-left-list {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+    margin-top: 20px;
+}
+.clean-left-list > li {
+    margin-bottom: 25px !important; /* Równy luz pod dużymi podpunktami */
+}
+.clean-left-list > li:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* 4. Harmonizacja krótkich list (Rozdział 6 - Fazy) */
+.phase-list {
+    padding-left: 20px !important; /* Klasyczne wcięcie */
+    margin-top: 15px;
+}
+.phase-list li {
+    margin-bottom: 15px !important; /* Przerwa zwiększona do 15px */
+}
+.phase-list li:last-child {
+    margin-bottom: 0 !important;
+}
+
     </style>
 </head>
 
